@@ -47,38 +47,33 @@ def validarVitoria(rodada):
         print("o {} Vencedor!".format(rodada))
         parar = True
 
-#Configurações básicas
+# Configurações básicas
 tabuleiro = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]]
 parar = False
 rodada = "x"
 jogadas = 0
 
-#Loop do jogo
+# Loop do jogo
 while parar == False:
     interface(tabuleiro)
     linha = int(input("Digite a linha da tabuleiro: "))
     coluna = int(input("Digite a coluna da tabuleiro: "))
 
+    if tabuleiro[linha][coluna] != " ":
+        print("Essa posição já está ocupada. Escolha outra!")
+        continue
+
+    tabuleiro[linha][coluna] = rodada
+    validarVitoria(rodada)
+    jogadas += 1
+
     if rodada == "x":
-        tabuleiro[linha][coluna] = "x"
-        validarVitoria(rodada)
-        jogadas += 1
         rodada = "o"
-    elif rodada == "o":
-        tabuleiro[linha][coluna] = "o"
-        validarVitoria(rodada)
-        jogadas += 1
+    else:
         rodada = "x"
 
-
-#Validação de linha ocupada
-
-
-
-
-
-#Empate
-    if jogadas == 9:
+    # Verificação de Empate
+    if jogadas == 9 and parar == False:
         interface(tabuleiro)
         print("Empate!")
         parar = True
