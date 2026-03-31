@@ -17,6 +17,10 @@ O programa consiste no jogo clássico da velha, entre dois jogadores, sendo exec
 ## Conceitos aplicados
 - Listas, loops (`while`, `for`), condicionais e funções.
 
+## Rodando
+
+![](assets/rodando.jpeg)
+
 
 ## 📂 Como executar
 1. Instale o Python em sua máquina
