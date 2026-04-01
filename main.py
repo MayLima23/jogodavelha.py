@@ -9,71 +9,82 @@ def validarVitoria(rodada):
     # Verificação das Horizontais
     if(tabuleiro[0][0] == rodada and tabuleiro[0][1] == rodada and tabuleiro[0][2] == rodada):
         interface(tabuleiro)
-        print("o {} Vencedor!".format(rodada))
+        print("o {} é o vencedor!".format(rodada))
         parar = True
 
     if (tabuleiro[1][0] == rodada and tabuleiro[1][1] == rodada and tabuleiro[1][2] == rodada):
             interface(tabuleiro)
-            print("o {} Vencedor!".format(rodada))
+            print("o {} é o vencedor!".format(rodada))
             parar = True
 
     if (tabuleiro[2][0] == rodada and tabuleiro[2][1] == rodada and tabuleiro[2][2] == rodada):
         interface(tabuleiro)
-        print("o {} Vencedor!".format(rodada))
+        print("o {} é o vencedor!".format(rodada))
         parar = True
     # Verficação das Verticais
     if (tabuleiro[0][0] == rodada and tabuleiro[1][0] == rodada and tabuleiro[2][0] == rodada):
         interface(tabuleiro)
-        print("o {} Vencedor!".format(rodada))
+        print("o {} é o vencedor!".format(rodada))
         parar = True
 
     if (tabuleiro[0][1] == rodada and tabuleiro[1][1] == rodada and tabuleiro[2][1] == rodada):
         interface(tabuleiro)
-        print("o {} Vencedor!".format(rodada))
+        print("o {} é o vencedor!".format(rodada))
         parar = True
 
     if (tabuleiro[0][2] == rodada and tabuleiro[1][2] == rodada and tabuleiro[2][2] == rodada):
         interface(tabuleiro)
-        print("o {} Vencedor!".format(rodada))
+        print("o {} é o vencedor!".format(rodada))
         parar = True
     #Verificação das Diagonais
     if (tabuleiro[0][0] == rodada and tabuleiro[1][1] == rodada and tabuleiro[2][2] == rodada):
         interface(tabuleiro)
-        print("o {} Vencedor!".format(rodada))
+        print("o {} é o vencedor!".format(rodada))
         parar = True
 
     if (tabuleiro[2][0] == rodada and tabuleiro[1][1] == rodada and tabuleiro[0][2] == rodada):
         interface(tabuleiro)
-        print("o {} Vencedor!".format(rodada))
-        parar = True
+        print("o {} é o vencedor!".format(rodada))
+        parar = True  
 
-# Configurações básicas
-tabuleiro = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]]
-parar = False
-rodada = "x"
-jogadas = 0
+partidas = 0
+while True:
+    # Configurações básicas
+    tabuleiro = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]]
+    parar = False
+    rodada = "x"
+    jogadas = 0
 
-# Loop do jogo
-while parar == False:
-    interface(tabuleiro)
-    linha = int(input("Digite a linha da tabuleiro: "))
-    coluna = int(input("Digite a coluna da tabuleiro: "))
-
-    if tabuleiro[linha][coluna] != " ":
-        print("Essa posição já está ocupada. Escolha outra!")
-        continue
-
-    tabuleiro[linha][coluna] = rodada
-    validarVitoria(rodada)
-    jogadas += 1
-
-    if rodada == "x":
-        rodada = "o"
-    else:
-        rodada = "x"
-
-    # Verificação de Empate
-    if jogadas == 9 and parar == False:
+    # Loop do jogo
+    while parar == False:
+        
         interface(tabuleiro)
-        print("Empate!")
-        parar = True
+        linha = int(input("Digite a linha da tabuleiro: "))
+        coluna = int(input("Digite a coluna da tabuleiro: "))
+
+        if tabuleiro[linha][coluna] != " ":
+            print("Essa posição já está ocupada. Escolha outra!")
+            continue
+
+        tabuleiro[linha][coluna] = rodada
+        validarVitoria(rodada)
+        jogadas += 1
+
+        if rodada == "x":
+            rodada = "o"
+        else:
+            rodada = "x"
+
+        # Verificação de Empate
+        if jogadas == 9 and parar == False:
+            interface(tabuleiro)
+            print("Empate!")
+            parar = True
+
+    partidas += 1
+
+    jogar_novamente = input("Quer jogar novamente? (s/n): ").lower()
+    if jogar_novamente!= "s":
+        print(f"Você jogou {partidas} partidas!")
+        break
+
