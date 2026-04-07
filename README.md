@@ -13,9 +13,15 @@ O programa consiste no jogo clássico da velha, entre dois jogadores, sendo exec
 ## 💻 Tecnologias Utilizadas
 - **Linguagem:** Python 3.x
 
+## ⚙️ Como executar o programa
+- Sistema operacional: Windows, MacOS e Linux
+- Instalar algum editor de código, ou uma IDE, exemplo: VS Code ou PyCharm
+- Baixar o arquivo do jogo
+- Abrir e executar em algum dos exemplos citados acima
+
 ## 👥 Trabalho em Equipe
 - **Equipe 05:** Meus agradecimentos aos meus colegas, que mesmo com horários diferentes, conseguimos completar o projeto.
-- Obrigada @Nicole, @Maria Clara e @Pedro.
+- Obrigada @Nnicolemendes0419, @maclaranb e @pedroxx_27348
 
 ## Conceitos aplicados
 - Listas, loops (`while`, `for`), condicionais e funções.
