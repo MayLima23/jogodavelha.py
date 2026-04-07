@@ -13,11 +13,8 @@ O programa consiste no jogo clássico da velha, entre dois jogadores, sendo exec
 ## 💻 Tecnologias Utilizadas
 - **Linguagem:** Python 3.x
 
-## ⚙️ Como executar o programa
-- Sistema operacional: Windows, MacOS e Linux
-- Instalar algum editor de código, ou uma IDE, exemplo: VS Code ou PyCharm
-- Baixar o arquivo do jogo
-- Abrir e executar em algum dos exemplos citados acima
+## ⚙️ Sistema operacional
+- Windows, MacOS e Linux
 
 ## 👥 Trabalho em Equipe
 - **Equipe 05:** Meus agradecimentos aos meus colegas, que mesmo com horários diferentes, conseguimos completar o projeto.
@@ -29,7 +26,6 @@ O programa consiste no jogo clássico da velha, entre dois jogadores, sendo exec
 ## Rodando
 
 ![](assets/rodando.jpeg)
-
 
 ## 📂 Como executar
 1. Instale o Python em sua máquina
